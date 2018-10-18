@@ -21,7 +21,8 @@
             android:label="@string/title_1" >
         </activity>
         <activity android:name=".LockScreen" />
-        <activity android:name=".DrumPad"></activity>
+        <activity android:name=".DrumPad" />
+        <activity android:name=".CreatePassword"></activity>
     </application>
 
 </manifest>
