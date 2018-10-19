@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.widget.DrawerLayout
 import android.util.Log
-
 class LockScreen : AppCompatActivity() {
 
     private lateinit var mDrawerLayout: DrawerLayout
