@@ -59,7 +59,7 @@ class LockScreen : AppCompatActivity() {
                     toast.show()
 
                 }
-           
+
 
         }
 
