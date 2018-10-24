@@ -6,28 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".LockScreen">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="283dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="23dp"
-        android:text="Enter your PIN to access the app"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="552dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="427dp"
-        android:ems="10"
-        android:inputType="numberPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:autofillHints="PIN" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="225dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="23dp"
+            android:text="Enter your PIN to access the app"
+            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/text_input_lockscreen"
+            android:layout_width="380dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="44dp"
+            android:autofillHints="PIN"
+            android:ems="10"
+            android:inputType="numberPassword"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="58dp" />
+
+        <Button
+            android:id="@+id/button_lock_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

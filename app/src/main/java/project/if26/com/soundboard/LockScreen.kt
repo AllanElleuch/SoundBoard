@@ -7,31 +7,60 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.widget.DrawerLayout
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+
 class LockScreen : AppCompatActivity() {
 
     private lateinit var mDrawerLayout: DrawerLayout
     private lateinit var password:String
+    private lateinit var editText: EditText
+    private lateinit var button: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lock_screen)
 
-        // load the password
-        var settings = getSharedPreferences("PREF", 0)
-        password = settings.getString("password","")
 
+            // load the password
+            var settings = getSharedPreferences("PREF", 0)
+            password = settings.getString("password","")
+            Log.v("intentmain","password value : " + password.toString())
+
+            // init button and field
+            editText = findViewById(R.id.text_input_lockscreen)
+            button = findViewById(R.id.button_lock_screen)
 
         if (password.equals(""))
         {
-            Log.v("intent","Create a new password intent")
+            Log.v("intentmain","Create a new password intent")
             //if no password
             val intent = Intent(getApplicationContext(), CreatePassword::class.java)
             startActivity(intent)
+            finish()
+
         }
-        else
-        {
-            //if there is a password
+
+        button.setOnClickListener { v ->
+
+
+                //if there is a password
+                if (password.equals(editText.text.toString())) {
+                    val toast = Toast.makeText(applicationContext, "Password match", Toast.LENGTH_SHORT)
+                    toast.show()
+                    val intent = Intent(getApplicationContext(), DrumPad::class.java)
+                    startActivity(intent)
+                    finish()
+
+                } else {
+                    val toast = Toast.makeText(applicationContext, "Password is wrong", Toast.LENGTH_SHORT)
+                    toast.show()
+
+                }
+           
+
         }
 
 
