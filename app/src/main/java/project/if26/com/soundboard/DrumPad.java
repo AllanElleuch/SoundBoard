@@ -1,5 +1,6 @@
 package project.if26.com.soundboard;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -20,7 +21,9 @@ public class DrumPad extends AppCompatActivity {
     private int sound7;
     private int sound8;
     private int sound9;
-    private int sound00;
+    private int sound10;
+    private int sound11;
+    private int sound12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,52 +38,71 @@ public class DrumPad extends AppCompatActivity {
 
         //sp = new SoundPool(2, AudioManager.STREAM_MUSIC,0);
 
-        sound1 = sp.load(getApplicationContext(),R.raw.sound1,1);
-        sound2 = sp.load(getApplicationContext(),R.raw.sound2,1);
-        sound3 = sp.load(getApplicationContext(),R.raw.sound3,1);
-        sound4 = sp.load(getApplicationContext(),R.raw.sound4,1);
-        sound5 = sp.load(getApplicationContext(),R.raw.sound5,1);
-        sound6 = sp.load(getApplicationContext(),R.raw.sound6,1);
-        sound7 = sp.load(getApplicationContext(),R.raw.sound7,1);
-        sound8 = sp.load(getApplicationContext(),R.raw.sound8,1);
-        sound9 = sp.load(getApplicationContext(),R.raw.sound9,1);
-        sound00 = sp.load(getApplicationContext(),R.raw.sound00,1);
+        sound1 = sp.load(getApplicationContext(),R.raw.hat01,1);
+        sound2 = sp.load(getApplicationContext(),R.raw.hat02,1);
+        sound3 = sp.load(getApplicationContext(),R.raw.hat10,1);
+        sound4 = sp.load(getApplicationContext(),R.raw.kick03,1);
+        sound5 = sp.load(getApplicationContext(),R.raw.kick05,1);
+        sound6 = sp.load(getApplicationContext(),R.raw.kick11,1);
+        sound7 = sp.load(getApplicationContext(),R.raw.snare02,1);
+        sound8 = sp.load(getApplicationContext(),R.raw.snare05,1);
+        sound9 = sp.load(getApplicationContext(),R.raw.snare09,1);
+        sound10 = sp.load(getApplicationContext(),R.raw.snare15,1);
+        sound11= sp.load(getApplicationContext(),R.raw.snare17,1);
+        sound12 = sp.load(getApplicationContext(),R.raw.snare18,1);
 
     }
 
     public void playsound1 (View v) {
-        sp.play(sound1,1.0f,1.0f,0,0,10f);
+        sp.play(sound1,1.0f,1.0f,0,0,1);
     }
     public void playsound2 (View v) {
-        sp.play(sound2,1.0f,1.0f,0,0,10f);
+        sp.play(sound2,1.0f,1.0f,0,0,1);
 
     }
     public void playsound3 (View v) {
-        sp.play(sound3,1.0f,1.0f,0,0,10f);
+        sp.play(sound3,1.0f,1.0f,0,0,1);
 
     }
     public void playsound4 (View v) {
-        sp.play(sound4,1.0f,1.0f,0,0,10f);
+        sp.play(sound4,1.0f,1.0f,0,0,1);
 
     }
     public void playsound5 (View v) {
-        sp.play(sound5,1.0f,1.0f,0,0,10f);
+        sp.play(sound5,1.0f,1.0f,0,0,1);
 
     }
     public void playsound6 (View v) {
-        sp.play(sound6,1.0f,1.0f,0,0,10f);
+        sp.play(sound6,1.0f,1.0f,0,0,1);
 
     }
     public void playsound7 (View v) {
-        sp.play(sound7,1.0f,1.0f,0,0,10f);
+        sp.play(sound7,1.0f,1.0f,0,0,1f);
 
     }
     public void playsound8 (View v) {
-        sp.play(sound8,1.0f,1.0f,0,0,10f);
+        sp.play(sound8,1.0f,1.0f,0,0,1);
 
     }
     public void playsound9 (View v) {
-        sp.play(sound9,1.0f,1.0f,0,0,10f);
+        sp.play(sound9,1.0f,1.0f,0,0,1);
 
     }
+    public void playsound10 (View v) {
+        sp.play(sound10,1.0f,1.0f,0,0,1);
+
+    }
+
+    public void playsound11 (View v) {
+        sp.play(sound11,1.0f,1.0f,0,0,1);
+
+    }
+
+    public void playsound12 (View v) {
+        sp.play(sound12,1.0f,1.0f,0,0,1);
+
+    }
+
+
 }
+
