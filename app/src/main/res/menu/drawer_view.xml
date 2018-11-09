@@ -5,12 +5,12 @@
 
     >
     <group>
-        <item android:id="@+id/pac_man"
+        <item android:id="@+id/drumpad_menu"
             android:icon="@drawable/ic_drafts_black_24dp"
-            android:title="pac man"/>
-        <item android:id="@+id/mario_menu"
+            android:title="Drumpad"/>
+        <item android:id="@+id/settings_menu"
             android:icon="@drawable/ic_drafts_black_24dp"
-            android:title="mario" />
+            android:title="Settings" />
         <item android:id="@+id/nav_item_two"
             android:icon="@drawable/ic_drafts_black_24dp"
             android:title="Item 2" />
