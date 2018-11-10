@@ -11,31 +11,7 @@
         <item android:id="@+id/settings_menu"
             android:icon="@drawable/ic_drafts_black_24dp"
             android:title="Settings" />
-        <item android:id="@+id/nav_item_two"
-            android:icon="@drawable/ic_drafts_black_24dp"
-            android:title="Item 2" />
-        <item android:id="@+id/nav_item_three"
-            android:icon="@drawable/ic_drafts_black_24dp"
-            android:title="Item 3" />
+
     </group>
 
-    <group android:id="@+id/BD">
-        <item android:id="@+id/bd_list"
-            android:title="BD liste" />
-        <item android:id="@+id/bd_add"
-            android:title="Bd ajoute" />
-        <item android:id="@+id/badd_delete"
-            android:title="Bd supprime" />
-    </group>
-
-    <item android:title="Title 1">
-        <menu>
-            <item android:id="@+id/nav_item_six"
-                android:icon="@drawable/ic_drafts_black_24dp"
-                android:title="Item 6" />
-            <item android:id="@+id/nav_item_seven"
-                android:icon="@drawable/ic_drafts_black_24dp"
-                android:title="Item 7" />
-        </menu>
-    </item>
 </menu>

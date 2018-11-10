@@ -29,7 +29,7 @@ public class DrumPad extends Template_Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drum_pad);
-        //setNavigationView();
+        setNavigationView();
 
 
         sp = new SoundPool.Builder()

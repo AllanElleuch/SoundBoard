@@ -13,12 +13,14 @@ import android.view.MenuInflater
 import android.view.View
 import android.content.Intent
 import android.util.Log
+import android.widget.Button
+import android.widget.Toast
 
 
 class MainActivity : Template_Activity() {
 
-    //private lateinit var mDrawerLayout: DrawerLayout
 
+    private lateinit var button: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +28,16 @@ class MainActivity : Template_Activity() {
          setContentView(R.layout.activity_main)
 
          setNavigationView();
+        button = findViewById(R.id.button_changepassword)
+        button.setOnClickListener { v ->
 
+
+                val intent = Intent(getApplicationContext(), CreatePassword::class.java)
+                startActivity(intent)
+                finish()
+
+
+        }
         Log.v("MainActivity1","Create Main activity")
 
     }
