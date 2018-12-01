@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-        tools:context=".DrumPad">
+        tools:context=".DrumPad_Rock">
 
 
         <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
@@ -231,7 +231,7 @@
             android:layout_marginTop="72dp"
             android:layout_marginBottom="22dp"
             android:fontFamily="@font/backto1982"
-            android:text="LoFi Drum Pad"
+            android:text="Rock Drum Pad"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="30sp"
