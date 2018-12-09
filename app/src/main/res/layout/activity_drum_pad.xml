@@ -241,14 +241,16 @@
             android:fontFamily="monospace"
             android:lineSpacingExtra="18sp"
             android:onClick="save"
-            android:text="Record"
+            android:text="Save"
             android:textAppearance="@android:style/TextAppearance.Material"
             android:textColor="?attr/colorBackgroundFloating"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/CompteRebours"
             app:layout_constraintEnd_toStartOf="@+id/record"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button41" />
+            app:layout_constraintTop_toBottomOf="@+id/button41"
+            app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -284,7 +286,7 @@
             android:layout_marginTop="72dp"
             android:layout_marginBottom="22dp"
             android:fontFamily="@font/backto1982"
-            android:text="LoFi Drum Pad"
+            android:text="Rock Drum Pad"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="30sp"

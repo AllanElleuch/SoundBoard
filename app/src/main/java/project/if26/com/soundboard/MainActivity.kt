@@ -17,7 +17,7 @@ import android.widget.Button
 import android.widget.Toast
 
 
-class MainActivity : Template_Activity() {
+class youMainActivity : Template_Activity() {
 
 
     private lateinit var button: Button

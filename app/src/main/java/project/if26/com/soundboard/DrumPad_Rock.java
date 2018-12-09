@@ -24,7 +24,7 @@ public class DrumPad_Rock extends Template_Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drum_pad);
+        setContentView(R.layout.activity_drum_pad_rock);
         setNavigationView();
 
 
