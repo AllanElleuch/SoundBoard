@@ -2,7 +2,14 @@ package project.if26.com.soundboard;
 
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import kotlin.Pair;
 
 public class DrumPad_Rock extends Template_Activity {
 
@@ -20,6 +27,32 @@ public class DrumPad_Rock extends Template_Activity {
     private int sound10;
     private int sound11;
     private int sound12;
+    private long chrono= System.currentTimeMillis();
+
+    private ArrayList< Pair<String,Long> > listEvenement = new ArrayList< Pair<String,Long> >();
+
+
+    public final void Go_Chrono() {
+        this.chrono = System.currentTimeMillis();
+    }
+
+    public final void addEvent_Chrono(String functionName) {
+        Long chrono2 = System.currentTimeMillis();
+        Long temps = chrono2 - this.chrono;
+        this.chrono += temps;
+
+        Pair tuple = new Pair(functionName, temps);
+        this.listEvenement.add(tuple);
+        Log.v("Chrono", "Temps evenement = " + temps + " ms");
+        String printlist = "";
+
+        String print = "";
+        for(Pair pair : this.listEvenement) {
+            print +=  pair.getSecond().toString() + " || " + pair.getFirst();
+        }
+
+        Log.v("Chrono", "Total evenement = " + print);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +131,90 @@ public class DrumPad_Rock extends Template_Activity {
     public void playsound12 (View v) {
         sp.play(sound12,1.0f,1.0f,0,0,1);
 
+    }
+
+    public void playsound(String sound){
+        switch (sound){
+            case "sound1": sp.play(sound1,1.0f,1.0f,0,0,1);
+                break;
+            case "sound2": sp.play(sound2,1.0f,1.0f,0,0,1);
+                break;
+            case "sound3": sp.play(sound3,1.0f,1.0f,0,0,1);
+                break;
+            case "sound4": sp.play(sound4,1.0f,1.0f,0,0,1);
+                break;
+            case "sound5": sp.play(sound5,1.0f,1.0f,0,0,1);
+                break;
+            case "sound6": sp.play(sound6,1.0f,1.0f,0,0,1);
+                break;
+            case "sound7": sp.play(sound7,1.0f,1.0f,0,0,1);
+                break;
+            case "sound8": sp.play(sound8,1.0f,1.0f,0,0,1);
+                break;
+            case "sound9": sp.play(sound9,1.0f,1.0f,0,0,1);
+                break;
+            case "sound10": sp.play(sound10,1.0f,1.0f,0,0,1);
+                break;
+            case "sound11": sp.play(sound11,1.0f,1.0f,0,0,1);
+                break;
+            case "sound12": sp.play(sound12,1.0f,1.0f,0,0,1);
+                break;
+        }
+    }
+
+    public void record (View v) {
+        this.chrono =  System.currentTimeMillis();
+        this.listEvenement = new ArrayList< Pair<String,Long> >();
+
+    }
+
+    public void play (View v) {
+
+        Method method;
+
+        for(Pair<String,Long> pair : this.listEvenement){
+
+            Log.v("Chrono", "call : " + pair.getFirst());
+
+            try {
+                TimeUnit.MILLISECONDS.sleep(pair.getSecond());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            playsound(pair.getFirst());
+            /*
+
+
+            try {
+                  method  = this.getClass().getMethod(pair.getFirst(),   View.class);
+
+
+                try {
+                    method.invoke(this, v   );
+                } catch (IllegalArgumentException e) {
+                    throw  new IllegalArgumentException();
+
+                }
+                catch (
+                        IllegalAccessException e) {
+
+                }
+                catch (InvocationTargetException e) {   }
+
+            }
+
+            catch (SecurityException e) {
+                throw  new SecurityException();
+            }
+            catch (NoSuchMethodException e) {
+
+            }
+
+             */
+
+
+        }
     }
 
 

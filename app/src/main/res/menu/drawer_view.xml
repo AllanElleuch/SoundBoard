@@ -5,9 +5,14 @@
 
     >
     <group>
-        <item android:id="@+id/drumpad_menu"
+        <item
+            android:id="@+id/drumpad_menu"
             android:icon="@drawable/ic_drafts_black_24dp"
-            android:title="Drumpad"/>
+            android:title="Drumpad Lofi" />
+        <item
+            android:id="@+id/Drumpad_Rock"
+            android:icon="@drawable/ic_drafts_black_24dp"
+            android:title="Drumpad Rock" />
         <item android:id="@+id/settings_menu"
             android:icon="@drawable/ic_drafts_black_24dp"
             android:title="Settings" />

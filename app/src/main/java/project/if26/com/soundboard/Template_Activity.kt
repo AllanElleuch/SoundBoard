@@ -62,12 +62,21 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
         val drumpadActivityIntent = Intent(this, DrumPad::class.java)
         val settingsActivityIntent = Intent(this, MainActivity::class.java)
         val myActivityPacManAttempt = Intent(this, MainActivity2::class.java)
+        val drumpadRockActivityIntent = Intent(this, DrumPad_Rock::class.java);
 
 
 
 
 
         return when (item.itemId) {
+
+            R.id.Drumpad_Rock ->{
+                Log.v("MainActivity1","in drumpad rock menu")
+                mDrawerLayout.openDrawer(GravityCompat.START)
+                startActivity(drumpadRockActivityIntent)
+                true
+
+            }
 
 
 

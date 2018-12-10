@@ -286,7 +286,7 @@
             android:layout_marginTop="72dp"
             android:layout_marginBottom="22dp"
             android:fontFamily="@font/backto1982"
-            android:text="Rock Drum Pad"
+            android:text="LOFI Drum Pad"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="30sp"
