@@ -29,8 +29,8 @@
         <Button
             android:id="@+id/button31"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:background="#ff9966"
             android:onClick="playsound7"
@@ -43,8 +43,8 @@
         <Button
             android:id="@+id/button43"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="92dp"
             android:background="#00e600"
@@ -57,8 +57,8 @@
         <Button
             android:id="@+id/button42"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="92dp"
             android:background="#33ff33"
             android:onClick="playsound11"
@@ -70,8 +70,8 @@
         <Button
             android:id="@+id/button32"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#ff7733"
             android:onClick="playsound8"
             app:layout_constraintBottom_toTopOf="@+id/button42"
@@ -82,8 +82,8 @@
         <Button
             android:id="@+id/button21"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:background="#4dffff"
             android:onClick="playsound4"
@@ -95,9 +95,9 @@
         <Button
             android:id="@+id/button11"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
-            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="111dp"
             android:background="#9966ff"
             android:onClick="playsound1"
@@ -108,8 +108,8 @@
         <Button
             android:id="@+id/button13"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="111dp"
             android:layout_marginEnd="19dp"
             android:background="#661aff"
@@ -122,8 +122,8 @@
         <Button
             android:id="@+id/button33"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="19dp"
             android:background="#ff5500"
             android:onClick="playsound9"
@@ -135,8 +135,8 @@
         <Button
             android:id="@+id/button41"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="92dp"
             android:background="#66ff66"
@@ -149,8 +149,8 @@
         <Button
             android:id="@+id/button23"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="19dp"
             android:background="#00cccc"
             android:onClick="playsound6"
@@ -162,8 +162,8 @@
         <Button
             android:id="@+id/button12"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="111dp"
             android:background="#7733ff"
             android:onClick="playsound2"
@@ -175,8 +175,8 @@
         <Button
             android:id="@+id/button22"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="115dp"
-            android:layout_height="91dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#00e6e6"
             android:onClick="playsound5"
             app:layout_constraintBottom_toTopOf="@+id/button32"
@@ -229,27 +229,6 @@
             app:layout_constraintTop_toBottomOf="@+id/button42"
             app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/save"
-            android:layout_width="80dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@android:color/holo_purple"
-            android:fontFamily="monospace"
-            android:lineSpacingExtra="18sp"
-            android:onClick="save"
-            android:text="Record"
-            android:textAppearance="@android:style/TextAppearance.Material"
-            android:textColor="?attr/colorBackgroundFloating"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/CompteRebours"
-            app:layout_constraintEnd_toStartOf="@+id/record"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button41" />
-
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="0dp"
@@ -273,8 +252,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/record"
             app:layout_constraintHorizontal_bias="0.468"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="3" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/Title"
@@ -313,14 +291,14 @@
 
 
     <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:menu="@menu/drawer_view">
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view">
 
-        </android.support.design.widget.NavigationView>
+    </android.support.design.widget.NavigationView>
 
 
 </android.support.v4.widget.DrawerLayout>

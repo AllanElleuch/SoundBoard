@@ -92,7 +92,9 @@ class MainActivity2 : AppCompatActivity() {
 
                 true
             }
-            R.id.mario_menu -> {
+
+            /*
+            R.id.XX -> {
                 Log.v("MainActivity1","IN mario menu")
                 mDrawerLayout.openDrawer(GravityCompat.START)
                 val myIntent = Intent(this, MainActivity2::class.java)
@@ -100,15 +102,8 @@ class MainActivity2 : AppCompatActivity() {
 
                 true
             }
+        */
 
-            R.id.pac_man -> {
-                Log.v("MainActivity1","IN mario menu2")
-                mDrawerLayout.openDrawer(GravityCompat.START)
-                val myIntent = Intent(this, MainActivity::class.java)
-                startActivity(myIntent)
-
-                true
-            }
 
             else -> {
                 Log.v("MainActivity1","in else : " + item.toString())

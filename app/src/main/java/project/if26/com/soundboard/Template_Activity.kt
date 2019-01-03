@@ -13,6 +13,9 @@ import android.view.MenuInflater
 import android.view.View
 import android.content.Intent
 import android.util.Log
+import org.greenrobot.greendao.database.Database
+import android.app.Application
+
 
 
 open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigationItemSelectedListener  {
@@ -23,15 +26,22 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
 
 
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
+        // regular SQLite database
+
+
+
+     }
 
 
 
 
-    }
 
 
      fun setNavigationView() {
@@ -63,6 +73,7 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
         val settingsActivityIntent = Intent(this, MainActivity::class.java)
         val myActivityPacManAttempt = Intent(this, MainActivity2::class.java)
         val drumpadRockActivityIntent = Intent(this, DrumPad_Rock::class.java);
+        val noteActivityIntent = Intent(this, NoteActivity::class.java);
 
 
 
@@ -70,6 +81,8 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
 
         return when (item.itemId) {
 
+
+            /*
             R.id.Drumpad_Rock ->{
                 Log.v("MainActivity1","in drumpad rock menu")
                 mDrawerLayout.openDrawer(GravityCompat.START)
@@ -77,7 +90,7 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
                 true
 
             }
-
+            */
 
 
             R.id.drumpad_menu -> {
@@ -86,6 +99,14 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
                 startActivity(drumpadActivityIntent)
              true
              }
+
+            R.id.note_menu -> {
+                Log.v("MainActivity1","in note menu")
+                mDrawerLayout.openDrawer(GravityCompat.START)
+                startActivity(noteActivityIntent)
+                true
+            }
+
             R.id.settings_menu -> {
                 Log.v("MainActivity1","In settings menu")
                 mDrawerLayout.openDrawer(GravityCompat.START)
@@ -123,23 +144,7 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
 
             }
 
-             R.id.mario_menu -> {
-                 Log.v("MainActivity1","IN mario menu")
-                 mDrawerLayout.openDrawer(GravityCompat.START)
-                 val myIntent = Intent(this, MainActivity2::class.java)
-                 startActivity(myIntent)
 
-                 true
-             }
-
-             R.id.pac_man -> {
-                 Log.v("MainActivity1","IN pacman menu")
-                 mDrawerLayout.openDrawer(GravityCompat.START)
-                 val myIntent = Intent(this, Template_Activity::class.java)
-                 startActivity(myIntent)
-
-                 true
-             }
 
             else -> {
                 Log.v("MainActivity1","in else : " + item.toString())
