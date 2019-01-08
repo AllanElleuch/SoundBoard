@@ -3,10 +3,10 @@ package project.if26.com.soundboard;
 import android.app.Application;
 
 import org.greenrobot.greendao.database.Database;
-
+import org.greenrobot.greendao.*;
 public class App extends Application {
 
-    private DaoSession daoSession;
+    private AbstractDaoSession daoSession;
 
     @Override
     public void onCreate() {
@@ -25,6 +25,6 @@ public class App extends Application {
     }
 
     public DaoSession getDaoSession() {
-        return daoSession;
+        return (DaoSession) daoSession;
     }
 }
