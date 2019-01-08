@@ -15,6 +15,8 @@
  */
 package project.if26.com.soundboard;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +30,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
+import android.content.Intent;
 
 import org.greenrobot.greendao.query.Query;
 
@@ -36,6 +39,7 @@ import java.util.Date;
 import java.util.List;
 
 public class NoteActivity extends Template_Activity {
+    Context  mContext;
 
     private EditText editText;
     private View addNoteButton;
@@ -44,9 +48,10 @@ public class NoteActivity extends Template_Activity {
     private Query<Note> notesQuery;
     private NotesAdapter notesAdapter;
 
+    static String EXTRA_NOTE_ID = "longNoteID";
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mContext = this.getApplicationContext();
         setContentView(R.layout.main);
         setNavigationView();
 
@@ -118,11 +123,11 @@ public class NoteActivity extends Template_Activity {
         editText.setText("");
 
         final DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM);
-        String comment = "Added on " + df.format(new Date());
+       // String comment = "Added on " + df.format(new Date());
 
         Note note = new Note();
         note.setText(noteText);
-        note.setComment(comment);
+        //note.setComment(comment);
         note.setDate(new Date());
         note.setType(NoteType.TEXT);
         noteDao.insert(note);
@@ -137,10 +142,23 @@ public class NoteActivity extends Template_Activity {
             Note note = notesAdapter.getNote(position);
             Long noteId = note.getId();
 
-            noteDao.deleteByKey(noteId);
-            Log.d("DaoExample", "Deleted note, ID: " + noteId);
+            Intent noteActivityIntent = new Intent(mContext, ViewNote.class);
+            noteActivityIntent.putExtra(EXTRA_NOTE_ID, noteId);
+            startActivityForResult(noteActivityIntent,1);
+
+            //noteDao.deleteByKey(noteId);
+            //Log.d("DaoExample", "Deleted note, ID: " + noteId);
 
             updateNotes();
         }
     };
+
+    public void onActivityResult(int requestCode, int resultCode,
+                                 Intent data) {
+
+    this.updateNotes();
+
+    }
+
+
 }

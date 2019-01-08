@@ -13,7 +13,7 @@ import org.greenrobot.greendao.annotation.NotNull;
 @Entity(indexes = {
     @Index(value = "text, date DESC", unique = true)
 })
-public class Note {
+public class Note   {
 
     @Id
     private Long id;
