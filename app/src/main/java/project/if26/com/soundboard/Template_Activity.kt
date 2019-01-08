@@ -47,6 +47,8 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
      fun setNavigationView() {
 
 
+
+
          mDrawerLayout = findViewById(R.id.drawer_layout)
          val navigationView: NavigationView = findViewById(R.id.nav_view)
          navigationView.setNavigationItemSelectedListener(this)
@@ -61,6 +63,7 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
              setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24px)
          }
 
+
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
@@ -70,8 +73,7 @@ open class Template_Activity : AppCompatActivity() ,  NavigationView.OnNavigatio
         mDrawerLayout.closeDrawers()
 
         val drumpadActivityIntent = Intent(this, DrumPad::class.java)
-        val settingsActivityIntent = Intent(this, MainActivity::class.java)
-        val myActivityPacManAttempt = Intent(this, MainActivity2::class.java)
+        val settingsActivityIntent = Intent(this, SettingsActivity::class.java)
         val drumpadRockActivityIntent = Intent(this, DrumPad_Rock::class.java);
         val noteActivityIntent = Intent(this, NoteActivity::class.java);
 
